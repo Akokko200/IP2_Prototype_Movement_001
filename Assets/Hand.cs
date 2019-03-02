@@ -39,9 +39,17 @@ public class Hand : MovableLimb
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Handle")
+        {
+            overHandle = true;
+        }
+    }
 
 
-	/// <summary>
+
+    /// <summary>
     /// Call this to set this limb to be or not be controlled by the player.
     /// Causes the limb to switch between FK and IK.
     /// </summary>
